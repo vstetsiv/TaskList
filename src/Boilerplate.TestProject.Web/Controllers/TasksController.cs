@@ -21,7 +21,11 @@ namespace Boilerplate.TestProject.Web.Controllers
         public async Task<IActionResult> Index(GetAllTasksInput input)
         {
             var output = await _taskAppService.GetAll(input);
-            var model = new TasksIndexViewModel(output.Items);
+            var model = new TasksIndexViewModel(output.Items)
+            {
+                SelectedTaskState = input.State
+            };
+
             return View(model);
         }
     }
