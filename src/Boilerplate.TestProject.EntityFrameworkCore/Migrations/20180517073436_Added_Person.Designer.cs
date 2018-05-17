@@ -12,9 +12,10 @@ using System;
 namespace Boilerplate.TestProject.Migrations
 {
     [DbContext(typeof(TestProjectDbContext))]
-    partial class TestProjectDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180517073436_Added_Person")]
+    partial class Added_Person
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

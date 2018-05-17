@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 using Abp.Timing;
@@ -22,17 +23,22 @@ namespace Boilerplate.TestProject.Models
 
         public TaskState State { get; set; }
 
+        [ForeignKey("AssignedPersonId")]
+        public Person AssignedPerson { get; set; }
+        public Guid? AssignedPersonId { get; set; }
+
         public Task()
         {
             CreationTime = Clock.Now;
             State = TaskState.Open;
         }
 
-        public Task(string title, string deswcription = null) 
+        public Task(string title, string deswcription = null, Guid? assignedPersonId = null) 
             : this()
         {
             Title = title;
             Description = deswcription;
+            AssignedPersonId = assignedPersonId;
         }
     }
 
