@@ -19,6 +19,12 @@ namespace Boilerplate.TestProject
             _taskRepository = taskRepository;
         }
 
+        public async Task Create(CreateTaskInput input)
+        {
+            var task = ObjectMapper.Map<Models.Task>(input);
+            await _taskRepository.InsertAsync(task);
+        }
+
         public async Task<ListResultDto<TaskListDto>> GetAll(GetAllTasksInput input)
         {
             var tasks = await _taskRepository
