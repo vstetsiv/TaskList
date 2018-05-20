@@ -1,0 +1,15 @@
+﻿{
+  "culture": "uk-UA",
+  "texts": {
+    "ChangeLanguage": "Змінити мову",
+    "HomePage": "Домашня сторінка",
+    "TaskList": "Список задач",
+    "TaskState_Open": "Відкрита",
+    "TaskState_Completed": "Закрита",
+    "AddNew": "Створити",
+    "NewTask": "Нова задача",
+    "Title": "Назва",
+    "Description": "Опис завдання",
+    "Save": "Зберегти"
+  }
+}

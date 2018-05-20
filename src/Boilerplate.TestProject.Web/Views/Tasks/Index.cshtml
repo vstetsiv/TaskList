@@ -37,8 +37,9 @@
     </div>
 </div>
 
-@section scripts
-{ 
+<button id="AddNewTaskBtn" class="btn btn-primary btn-sm" asp-controller="Tasks" asp-action="Create">@L("AddNew")</button>
+
+@section scripts{
     <environment names="Development">
         <script src="~/js/views/tasks/index.js"></script>
     </environment>

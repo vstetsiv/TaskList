@@ -12,7 +12,7 @@ namespace Boilerplate.TestProject.Localization
         public static void Configure(ILocalizationConfiguration localizationConfiguration)
         {
             localizationConfiguration.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flags england", isDefault: true));
-            localizationConfiguration.Languages.Add(new LanguageInfo("tr", "Türkçe", "famfamfam-flags tr"));
+            localizationConfiguration.Languages.Add(new LanguageInfo("uk-UA", "Українська", "famfamfam-flags ua"));
 
             localizationConfiguration.Sources.Add(
                 new DictionaryBasedLocalizationSource(TestProjectConsts.LocalizationSourceName,

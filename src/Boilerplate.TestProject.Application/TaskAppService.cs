@@ -32,5 +32,11 @@ namespace Boilerplate.TestProject
                 ObjectMapper.Map<List<TaskListDto>>(tasks)
             );
         }
+
+        public async Task Create(CreateTaskInput input)
+        {
+            var task = ObjectMapper.Map<Models.Task>(input);
+            await _taskRepository.InsertAsync(task);
+        }
     }
 }
