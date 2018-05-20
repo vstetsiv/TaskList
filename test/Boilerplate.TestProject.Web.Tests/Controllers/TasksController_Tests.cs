@@ -17,7 +17,6 @@ namespace Boilerplate.TestProject.Web.Tests.Controllers
         public async System.Threading.Tasks.Task Should_Get_Tasks_By_State()
         {
             //Act
-
             var responce = await GetResponseAsStringAsync(
                 GetUrl<TasksController>(nameof(TasksController.Index), new
                 {
